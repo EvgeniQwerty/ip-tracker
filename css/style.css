@@ -1,0 +1,136 @@
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: "Rublk", sans-serif;
+  font-weight: 400;
+  color: black;
+}
+@media (max-width: 420px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+body {
+  font-size: 1.8rem;
+}
+
+.container {
+  width: 100%;
+}
+
+.header {
+  position: relative;
+  height: 40vh;
+  background: url(../images/pattern-bg-desktop.png) center/cover no-repeat;
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+}
+.header__input-wrapper {
+  display: flex;
+  justify-self: center;
+}
+.header__input {
+  font-size: 1.8rem;
+  width: 80vw;
+  height: 5rem;
+  border-radius: 1.5rem 0 0 1.5rem;
+  border: none;
+  box-shadow: 2px 2px 1px 0.5px rgba(0, 0, 0, 0.1);
+  padding-left: 3rem;
+  border: none;
+  outline: none;
+}
+.header__submit {
+  height: 5rem;
+  width: 5rem;
+  background-color: hsl(0, 0%, 17%);
+  border-radius: 0 1.5rem 1.5rem 0;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 700;
+  box-shadow: 2px 2px 1px 0.5px rgba(0, 0, 0, 0.1);
+  transition: 0.3s all;
+}
+.header__submit:hover {
+  background-color: hsl(0, 0%, 59%);
+}
+
+.title-1 {
+  color: white;
+  font-size: 3.2rem;
+}
+
+.ip-data-section {
+  z-index: 10000;
+  position: absolute;
+  top: 70%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 420px) {
+  .ip-data-section {
+    top: 50%;
+  }
+}
+.ip-data-section__ip-data {
+  width: 90%;
+}
+
+.ip-data {
+  background-color: white;
+  border-radius: 1.5rem;
+  box-shadow: 2px 2px 1px 0.5px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 1280px) {
+  .ip-data {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 666px) {
+  .ip-data {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.element {
+  padding: 3rem;
+}
+@media (max-width: 1280px) {
+  .element {
+    padding: 1rem 2rem;
+  }
+}
+@media (max-width: 666px) {
+  .element {
+    padding: 1rem;
+    text-align: center;
+  }
+}
+.element__type {
+  color: hsl(0, 0%, 59%);
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: 0.2rem;
+}
+.element__text {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+#map {
+  min-height: 60vh;
+}/*# sourceMappingURL=style.css.map */

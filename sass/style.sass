@@ -1,0 +1,121 @@
+$color-white: white
+$color-black: black
+$color-darkgray: hsl(0, 0%, 17%)
+$color-gray: hsl(0, 0%, 59%)
+
+$media1: 1280px
+$media2: 666px  
+$media3: 420px    
+    
+*, ::after, ::before
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+html
+    font-size: 10px
+    @media (max-width: $media3)
+        font-size: 8px    
+    font-family: 'Rublk', sans-serif
+    font-weight: 400
+    color: $color-black    
+
+body 
+    font-size: 1.8rem    
+
+.container
+    width: 100%
+
+.header 
+    position: relative
+    height: 40vh
+    background: url(../images/pattern-bg-desktop.png) center / cover no-repeat   
+    padding: 3rem
+    display: flex
+    align-items: center
+    flex-direction: column
+    gap: 3rem
+
+    &__input-wrapper
+        display: flex
+        justify-self: center
+
+    &__input
+        font-size: 1.8rem
+        width: 80vw
+        height: 5rem
+        border-radius: 1.5rem 0 0 1.5rem
+        border: none
+        box-shadow: 2px 2px 1px .5px rgba($color-black, .1)
+        padding-left: 3rem  
+        border: none
+        outline: none
+
+    &__submit
+        height: 5rem
+        width: 5rem
+        background-color: $color-darkgray
+        border-radius: 0 1.5rem 1.5rem 0  
+        color: $color-white
+        font-size: 1.8rem
+        font-weight: 700 
+        box-shadow: 2px 2px 1px .5px rgba($color-black, .1)
+        transition: .3s all
+
+        &:hover
+            background-color: $color-gray
+            
+
+.title-1
+    color: $color-white   
+    font-size: 3.2rem 
+
+.ip-data-section   
+    
+    z-index: 10000
+    position: absolute
+    top: 70%
+    @media (max-width: $media3)
+        top: 50%
+    
+    width: 100%
+    display: flex
+    justify-content: center
+
+    &__ip-data
+        width: 90%
+
+.ip-data   
+    background-color: $color-white
+    border-radius: 1.5rem
+    box-shadow: 2px 2px 1px .5px rgba($color-black, .1)
+
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    @media (max-width: $media1)    
+        grid-template-columns: repeat(2, 1fr) 
+    @media (max-width: $media2)    
+        grid-template-columns: repeat(1, 1fr)           
+
+.element
+    padding: 3rem
+    @media (max-width: 1280px)    
+        padding: 1rem 2rem
+    @media (max-width: 666px)    
+        padding: 1rem  
+        text-align: center
+
+    &__type
+        color: $color-gray
+        text-transform: uppercase
+        font-size: 1.2rem
+        font-weight: 700
+        margin-bottom: 1rem
+        letter-spacing: .2rem
+
+    &__text
+        font-size: 1.8rem 
+        font-weight: 700   
+   
+#map
+    min-height: 60vh
