@@ -5,7 +5,8 @@ $color-gray: hsl(0, 0%, 59%)
 
 $media1: 1280px
 $media2: 666px  
-$media3: 420px    
+$media3: 420px  
+$media4: 800px 
     
 *, ::after, ::before
     margin: 0
@@ -29,6 +30,9 @@ body
 .header 
     position: relative
     height: 40vh
+    @media (min-height: $media4)
+        height: 30vh    
+
     background: url(../images/pattern-bg-desktop.png) center / cover no-repeat   
     padding: 3rem
     display: flex
