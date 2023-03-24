@@ -138,4 +138,9 @@ body {
 
 #map {
   min-height: 60vh;
+}
+@media (min-height: 800px) {
+  #map {
+    min-height: 70vh;
+  }
 }/*# sourceMappingURL=style.css.map */
